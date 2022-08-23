@@ -1,0 +1,106 @@
+---
+title: "Funciones"
+author: "jeol"
+date: "2022-08-15"
+output:
+  pdf_document: default
+  html_document: default
+  
+---
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
+Las funciones permiten obtener resultados a partir de operaciones matemáticas comunes como las que se muestran:
+
+## Tipos Funciones {.tabset}
+
+Existen diferente tipo de funciones, así:
+
+### Generales
+
+Permite asignar datos a variables.
+
+| Código     | Función        | 
+|------------|----------------|
+| sqrt(x)    | $\sqrt{x}$     | 
+| exp(x)     | $e^{x}$        |
+| log(x)     | $\log(x)$      | 
+| log10(x)   | $\log_{10}(x)$ | 
+| log(x,a)   | $\log_{a}(x)$  | 
+| abs(x)     | $|x|$          | 
+
+Aunque podemos usar el signo igual para una asignación, no se recomienda su uso.
+
+```{r}
+sqrt(16)
+exp(1)
+log(6)
+log10(8)
+log(3,4)
+abs(-pi)
+```
+
+### Combinatoria
+
+
+| Código       | Función         | 
+|--------------|-----------------|
+| factorial(x) | $x!$            | 
+| choose(n,m)  | $\binom{n}{m}$  |
+
+
+- Número factorial: número entero positivo $n$ como $n! = n . (n-1) ... 2 . 1$
+- Coeficiente binomial: $\binom{n}{m} = \frac{n!}{m!(n-m)!}$
+
+```{r}
+factorial(16)
+choose(5,3)
+```
+
+
+### trigonometricas
+
+
+| Código    | Función    | 
+|-----------|------------|
+| sin(x)    | $sin(x)$   | 
+| cos(x)    | $cos(x)$   |
+| tan(x)    | $tan(x)$   |
+| asin(x)   | $arcsin(x)$|
+| acos(x)   | $arccos(x)$|
+| atan(x)   | $arctan(x)$|
+
+Los grados se deben especificar en radianes
+
+![Fuente: Centro Estudios Escudero](./img/circunferencia_goniometrica.png)
+
+```{r}
+sin(pi/2)
+cos(pi)
+tan(0)
+sin(60*pi/180)
+asin(0.8660524) * 180 / pi
+```
+
+
+### Redondeo
+
+R trabaja con máximo 15 cifras decimales
+
+| Código       | Función                                             |             
+|--------------|-----------------------------------------------------|
+| print(x,n)   | Muestra n cifras significativas del número x        | 
+| round(x,n)   | Redondea las n cifras significativas del número x   | 
+| floor(x)     | $\lfloor x \rfloor$, parte entera por defecto de x  | 
+| ceiling(x)   | $\lceil x \rceil$, parte entera por exceso de x     | 
+| trunc(x)     | Parte entera de x, eliminando la parte decimal      |  
+
+```{r}
+print(sqrt(2))
+print(sqrt(2),10)
+round(sqrt(2),3)
+floor(sqrt(2))
+ceiling(sqrt(2))
+trunc(sqrt(2))
+```

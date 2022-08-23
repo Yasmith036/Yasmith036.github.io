@@ -1,0 +1,15 @@
+---
+title: "ESTADISTA"
+---
+Bienvendo
+
+Sumas y restas $a=(b*h)/2$
+
+Base 3
+Altura 5
+
+```{r}
+
+
+```
+
